@@ -13,167 +13,79 @@
             line-height: 1.6;
             margin: 0;
         }
+        .container { padding: 0 20px; max-width: 1100px; margin: auto; overflow: hidden; }
+        
+        /* Header */
+        header { background: #2c3e50; color: #fff; padding: 3rem 0; text-align: center; }
+        header h1 { margin: 0; font-size: 2.5rem; }
+        header p { margin: 10px 0 20px; font-size: 1.2rem; opacity: 0.9; font-weight: 300; }
+        
+        /* Navigation */
+        nav ul { padding: 0; list-style: none; margin-bottom: 20px; }
+        nav ul li { display: inline; margin: 0 15px; }
+        nav a { color: #fff; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+        nav a:hover { color: #3498db; }
 
-        .container {
-            padding: 0 20px;
-            max-width: 1100px;
-            margin: auto;
-            overflow: hidden;
-        }
-
-        /* Header Navigation */
-        header {
-            background: #2c3e50;
-            color: #fff;
-            padding: 2rem 0;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-
-        header p {
-            margin: 10px 0 0;
-            font-size: 1.2rem;
-            opacity: 0.9;
-            font-weight: 300;
-        }
-
-        nav ul {
-            padding: 0;
-            list-style: none;
-            margin-top: 20px;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        nav a {
-            color: #fff;
+        /* CV Button Style */
+        .btn-cv {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.1rem;
-            transition: color 0.3s;
+            transition: background 0.3s;
+            margin-top: 10px;
         }
-
-        nav a:hover {
-            color: #3498db;
-        }
+        .btn-cv:hover { background-color: #2980b9; }
 
         /* Sections */
-        section {
-            padding: 60px 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 50px;
-            color: #2c3e50;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 2rem;
-            position: relative;
-        }
-        
-        h2::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: #3498db;
-            margin: 10px auto 0;
-        }
+        section { padding: 60px 0; border-bottom: 1px solid #eee; }
+        h2 { text-align: center; margin-bottom: 50px; color: #2c3e50; text-transform: uppercase; letter-spacing: 1px; position: relative; }
+        h2::after { content: ''; display: block; width: 60px; height: 3px; background: #3498db; margin: 10px auto 0; }
 
         /* About Me */
-        #about img {
-            display: block;
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin: 0 auto 25px auto;
-            border: 5px solid #fff;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-        }
-
-        #about p {
-            text-align: center;
-            max-width: 750px;
-            margin: auto;
-            font-size: 1.1rem;
-            color: #555;
-        }
+        #about img { display: block; width: 200px; height: 200px; object-fit: cover; border-radius: 50%; margin: 0 auto 25px auto; border: 5px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.15); }
+        #about p { text-align: center; max-width: 750px; margin: auto; font-size: 1.1rem; color: #555; }
 
         /* Portfolio Grid */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        
+        .portfolio-item { 
+            background: #fff; 
+            padding: 30px; 
+            border-radius: 10px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+            transition: transform 0.3s ease; 
+            border-top: 5px solid #3498db; 
+            display: flex; 
+            flex-direction: column; 
         }
-
-        .portfolio-item {
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-top: 5px solid #3498db;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .portfolio-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-
-        .portfolio-item h3 {
-            margin-top: 0;
-            color: #2c3e50;
-            font-size: 1.4rem;
-        }
-
-        .portfolio-item img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 5px;
-            margin-bottom: 15px;
-            background-color: #f0f0f0;
-        }
-
-        .portfolio-item p {
-            flex-grow: 1;
-            color: #666;
-            font-size: 0.95rem;
-        }
-
-        .tech-stack {
-            margin-top: 15px;
-            font-size: 0.85rem;
-            color: #444;
-            background: #eef2f7;
-            padding: 8px 12px;
-            border-radius: 5px;
-            font-weight: 600;
-            border-left: 3px solid #2c3e50;
-        }
-
-        footer {
+        .portfolio-item:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        
+        .portfolio-item h3 { margin-top: 0; color: #2c3e50; font-size: 1.4rem; }
+        .portfolio-item img { width: 100%; height: 180px; object-fit: cover; border-radius: 5px; margin-bottom: 15px; background-color: #f0f0f0; }
+        .portfolio-item p { flex-grow: 1; color: #666; font-size: 0.95rem; }
+        
+        .tech-stack { margin: 15px 0; font-size: 0.85rem; color: #444; background: #eef2f7; padding: 8px 12px; border-radius: 5px; font-weight: 600; border-left: 3px solid #2c3e50; }
+        
+        /* Project Links */
+        .project-link {
+            display: block;
+            text-align: center;
             background: #2c3e50;
             color: #fff;
-            text-align: center;
-            padding: 30px 0;
-            margin-top: 0;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
             font-size: 0.9rem;
+            transition: background 0.3s;
         }
-        /* --- CSS STYLES END --- */
+        .project-link:hover { background: #34495e; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 30px 0; font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -181,7 +93,10 @@
     <header>
         <div class="container">
             <h1>Maha Alblwai</h1>
-            <p>Electronic & Computer Engineering (ECE) Student</p>
+            <p>Electronic & Computer Engineering Student</p>
+            
+            <a href="cv.pdf" class="btn-cv" target="_blank">Download My CV</a>
+
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
@@ -200,8 +115,7 @@
             <p>
                 I am a passionate <strong>Electronic and Computer Engineering (ECE)</strong> student at Effat University. 
                 I specialize in bridging the gap between hardware and intelligent software, with a strong focus on 
-                <strong>Artificial Intelligence, Robotics, and Embedded Systems</strong>. 
-                My work ranges from building physical robots with Raspberry Pi and Arduino to developing advanced Machine Learning models.
+                <strong>Artificial Intelligence, Robotics, and Embedded Systems</strong>.
             </p>
         </div>
     </section>
@@ -214,31 +128,25 @@
                 <div class="portfolio-item">
                     <img src="https://placehold.co/600x400/eef2f7/2c3e50?text=Solar+Forecasting" alt="Solar Project">
                     <h3>Solar Energy Forecasting</h3>
-                    <p>
-                        Conducted a comparative study using <strong>Artificial Neural Networks (ANN)</strong> to forecast Global Horizontal Irradiance (GHI). 
-                        Generated synthetic data to improve model robustness, achieving an <strong>MSE of 7309.77</strong>.
-                    </p>
+                    <p>Conducted a comparative study using <strong>Artificial Neural Networks (ANN)</strong> to forecast Global Horizontal Irradiance (GHI). Generated synthetic data to improve model robustness.</p>
                     <div class="tech-stack">MATLAB • Machine Learning • ANN</div>
+                    <a href="Research IEEE Solar ML.docx" class="project-link" target="_blank">View Research Paper</a>
                 </div>
 
                 <div class="portfolio-item">
                     <img src="https://placehold.co/600x400/eef2f7/2c3e50?text=Power+Prediction" alt="Power Project">
                     <h3>Power Consumption Predictor</h3>
-                    <p>
-                        Developed a <strong>Linear Regression</strong> model to analyze the relationship between temperature and power consumption. 
-                        Achieved an impressive <strong>R² score of 0.93</strong>.
-                    </p>
+                    <p>Developed a <strong>Linear Regression</strong> model to analyze the relationship between temperature and power consumption. Achieved an impressive <strong>R² score of 0.93</strong>.</p>
                     <div class="tech-stack">Python • Scikit-learn • Pandas</div>
+                    <a href="Lab6_AI.maha.ipynb" class="project-link" target="_blank">View Code Notebook</a>
                 </div>
 
                 <div class="portfolio-item">
                     <img src="https://placehold.co/600x400/eef2f7/2c3e50?text=Student+Classifier" alt="Student Project">
                     <h3>Student Performance Classifier</h3>
-                    <p>
-                        Built a <strong>Logistic Regression</strong> classifier to predict student pass/fail rates based on study hours. 
-                        Achieved a <strong>96% Accuracy</strong> rate on test data.
-                    </p>
+                    <p>Built a <strong>Logistic Regression</strong> classifier to predict student pass/fail rates based on study hours. Achieved a <strong>96% Accuracy</strong> rate on test data.</p>
                     <div class="tech-stack">Python • Seaborn • Logistic Regression</div>
+                    <a href="Lab6_AI.maha.ipynb" class="project-link" target="_blank">View Code Notebook</a>
                 </div>
 
             </div>
@@ -253,41 +161,33 @@
                 <div class="portfolio-item">
                     <img src="https://placehold.co/600x400/eef2f7/2c3e50?text=Robot+Car" alt="Robot Car">
                     <h3>Face ID Robot Car</h3>
-                    <p>
-                        Built a 4WD smart car powered by <strong>Raspberry Pi</strong>. Integrated a 5MP camera and 
-                        <strong>OpenCV</strong> to detect faces and control motors in real-time based on visual input.
-                    </p>
-                    <div class="tech-stack">Raspberry Pi 4B • Python • OpenCV • L298N</div>
+                    <p>Built a 4WD smart car powered by <strong>Raspberry Pi</strong>. Integrated a 5MP camera and <strong>OpenCV</strong> to detect faces and control motors in real-time.</p>
+                    <div class="tech-stack">Raspberry Pi 4B • Python • OpenCV</div>
+                    <a href="(Robot Car Project_ Face Identification)  (1).pdf" class="project-link" target="_blank">View Project Report</a>
                 </div>
 
                 <div class="portfolio-item">
                     <img src="https://placehold.co/600x400/eef2f7/2c3e50?text=Smart+Dustbin" alt="Smart Dustbin">
                     <h3>Touchless Smart Dustbin</h3>
-                    <p>
-                        Designed a hygienic waste solution using an <strong>Arduino Uno</strong>. 
-                        The system detects approaching objects (within 25cm) and automatically opens the lid using a servo motor.
-                    </p>
+                    <p>Designed a hygienic waste solution using an <strong>Arduino Uno</strong>. The system detects approaching objects (within 25cm) and automatically opens the lid using a servo motor.</p>
                     <div class="tech-stack">Arduino • Ultrasonic Sensor • Servo</div>
+                    <a href="Electronics 1 project report  2 (1).pdf" class="project-link" target="_blank">View Project Report</a>
                 </div>
 
                 <div class="portfolio-item">
                     <img src="https://placehold.co/600x400/eef2f7/2c3e50?text=Clap+Switch" alt="Clap Switch">
                     <h3>Arduino Clap Switch</h3>
-                    <p>
-                        Created a home automation device that toggles appliances on/off by detecting clap sounds. 
-                        Utilized a sound sensor and relay module for high-voltage control.
-                    </p>
+                    <p>Created a home automation device that toggles appliances on/off by detecting clap sounds. Utilized a sound sensor and relay module for high-voltage control.</p>
                     <div class="tech-stack">Arduino • Sound Sensor • Relay Module</div>
+                    <a href="Clap switch report .pdf" class="project-link" target="_blank">View Project Report</a>
                 </div>
                 
                  <div class="portfolio-item">
                     <img src="https://placehold.co/600x400/eef2f7/2c3e50?text=RTC+System" alt="RTC Clock">
                     <h3>Real-Time Clock System</h3>
-                    <p>
-                         Constructed a precise timekeeping system using the <strong>DS3231 RTC module</strong>. 
-                         Displays accurate time, date, and temperature on an I2C LCD screen.
-                    </p>
+                    <p>Constructed a precise timekeeping system using the <strong>DS3231 RTC module</strong>. Displays accurate time, date, and temperature on an I2C LCD screen.</p>
                     <div class="tech-stack">Arduino • RTC Module • I2C LCD</div>
+                    <a href="alarm_clock_2[1].docx" class="project-link" target="_blank">View Project Report</a>
                 </div>
 
             </div>
@@ -302,20 +202,17 @@
                 <div class="portfolio-item">
                     <img src="https://placehold.co/600x400/eef2f7/2c3e50?text=Python+Lib" alt="Python Library">
                     <h3>String Manipulation Library</h3>
-                    <p>
-                        Developed a custom Python library from scratch. Implemented core functions like 
-                        <code>is_alpha</code>, <code>to_upper</code>, and <code>find_chr</code> without relying on built-in string methods.
-                    </p>
+                    <p>Developed a custom Python library from scratch. Implemented core functions like <code>is_alpha</code> and <code>find_chr</code> without relying on built-in string methods.</p>
                     <div class="tech-stack">Python • Algorithm Design</div>
+                    <a href="gcs report copy final project.docx" class="project-link" target="_blank">View Project Report</a>
                 </div>
 
                 <div class="portfolio-item">
                     <img src="https://placehold.co/600x400/eef2f7/2c3e50?text=Voltage+Estimator" alt="Voltage Estimator">
                     <h3>Circuit Voltage Estimator</h3>
-                    <p>
-                        Implemented <strong>Multiple Linear Regression</strong> to predict output voltage ($V_{out}$) based on input voltage and variable resistances ($R_1, R_2$).
-                    </p>
+                    <p>Implemented <strong>Multiple Linear Regression</strong> to predict output voltage ($V_{out}$) based on input voltage and variable resistances.</p>
                     <div class="tech-stack">Python • Numpy • Scikit-learn</div>
+                    <a href="Lab6_AI.maha.ipynb" class="project-link" target="_blank">View Code Notebook</a>
                 </div>
 
             </div>
@@ -327,4 +224,4 @@
     </footer>
 
 </body>
-</html
+</html>
